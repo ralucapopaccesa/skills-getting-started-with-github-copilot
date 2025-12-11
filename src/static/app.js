@@ -24,18 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
         let participantsSection = "";
         if (details.participants.length > 0) {
           participantsSection = `
-            <div style="margin-top:12px; padding:10px; background:#eef2ff; border-radius:4px; border:1px solid #c5cae9;">
-              <strong style="color:#3949ab; display:block; margin-bottom:6px;">Participants:</strong>
-              <ul style="list-style-type:disc; margin-left:20px; color:#333; font-size:15px;">
+            <div class="participants-section">
+              <strong>Participants:</strong>
+              <ul class="participants-list">
                 ${details.participants.map(email => `<li>${email}</li>`).join("")}
               </ul>
             </div>
           `;
         } else {
           participantsSection = `
-            <div style="margin-top:12px; padding:10px; background:#eef2ff; border-radius:4px; border:1px solid #c5cae9;">
-              <strong style="color:#3949ab; display:block; margin-bottom:6px;">Participants:</strong>
-              <p style="color:#888; font-style:italic; margin:0;">No participants yet.</p>
+            <div class="participants-section">
+              <strong>Participants:</strong>
+              <p class="no-participants">No participants yet.</p>
             </div>
           `;
         }
